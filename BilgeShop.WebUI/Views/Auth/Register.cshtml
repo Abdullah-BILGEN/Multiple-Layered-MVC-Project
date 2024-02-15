@@ -1,0 +1,52 @@
+﻿@model RegisterViewModel
+
+
+<div class="login-box" style="top:33%; margin-top:80px; width:34%">
+    <h2 style="font-family:'Lucida Fax'">Kayıt Formu</h2>
+    <form method="post" asp-controller="Auth" asp-action="Register">
+        <div class="d-flex">
+            <div class="user-box me-4">
+                <input asp-for=FirstName type="text" required>
+                <label class="required" asp-for="FirstName"></label> 
+            </div>
+            <div class="user-box">
+                <input asp-for="LastName" type="text" required>
+                <label class="required" asp-for="LastName"></label>
+            </div>
+        </div>
+        <div class="user-box">
+            <input asp-for="Email" type="email" required>
+            <label class="required" asp-for="Email"></label>
+        </div>
+        <div class="d-flex">
+            <div class="user-box me-4">
+                <input asp-for="Password" type="password" required>
+                <label class="required" asp-for="Password"></label>
+            </div>
+
+            <div class="user-box ">
+                <input asp-for="PasswordConfirm" type="password" required>
+                <label class="required" asp-for="PasswordConfirm"></label>
+            </div>
+
+          
+        </div>
+
+
+
+        <div class="text-danger" asp-validation-summary="All">
+
+        </div>
+
+
+        <button style="font-family:'Lucida Fax'" type="submit" class="float-end">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Kayıt Ol
+        </button>
+       
+    </form>
+</div>
+
